@@ -9,8 +9,8 @@ import sys
 vzorec = re.compile(
     r'<a class="Adlink" href="[^<]*<span>(?P<znamka>.+?)</span>.*?'
     r'<li>Letnik 1.registracije:(?P<letnik>\d+)</li>.*?'
-    r'<li>(?P<prevozenih>\d+) km</li>.*?',
-    #r'<li>(?P<tip_motorja>\d+) motor.*?',
+    r'<li>(?P<prevozenih>\d+) km</li>.*?'
+    r'<li>(?P<tip_motorja>\d+) motor.*?',
     re.DOTALL
 )
 
@@ -21,7 +21,7 @@ def get_data(data):
     oglas['znamka'] = data['znamka']
     oglas['letnik'] = int(data['letnik'])
     oglas['prevozenih'] = int(data['prevozenih'])
-    #oglas['tip_motorja'] = data['tip_motorja']
+    oglas['tip_motorja'] = data['tip_motorja']
     return oglas
 
 
@@ -81,5 +81,5 @@ for i in range(1, 6):
     for ujemanje in vzorec.finditer(vsebina):
         podatki_oglasov.append(get_data(ujemanje))
 
-to_csv(podatki_oglasov, ['znamka', 'letnik', 'prevozenih', 'tip_motorja'], 'tip_motorja'], 'koncani_podatki.csv')
+to_csv(podatki_oglasov, ['znamka', 'letnik', 'prevozenih', 'tip_motorja'], 'koncani_podatki.csv')
 print('Podatki uspesno zapisani v datoteko!')
