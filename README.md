@@ -19,12 +19,3 @@ Delovne hipoteze:
 * Katera znamka ima najdražje avtomobile?
 * Ali lahko iz letnika avtomobila napovemo število prevoženih kilometrov?
 * Kolikšen je delež električnih avtomobilov 
-
-Analiza podatkov:
-* Po analizi podatkov opazimo, da ni nobene direktne povezave med močjo motorja in ceno avtomobila, edino
-odstopanje so avtomibli ki imajo več kot 413HP, ti imajo občutno višjo ceno.
-* Znamke razporejene padajoče glede na njihovo povprečno ceno so: <br> Rolls-Royce, Lamborghini, McLaren, Ferrari, Porsche,
- Land Rover, Audi, Mercedes-Benz, BMW, Maserati, Tesla in Ford. <br> 
- Pri tem imajo Rolls-Roycei in Lamborghiniji povprečno ceno
- vsaj enkrat vecjo od preostalih znamk, preostale znamke pa so v istem cenovnem razredu.
-* Starejši avtomobili imajo povprečno več prevoženih kilometrov, kot bi pričakovali, z izjemo letnikov 2010, za katere
